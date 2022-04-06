@@ -1,0 +1,33 @@
+{
+    "name": "newecommerce",
+    "version": "1.0.0",
+    "description": "��#\u0000 \u0000r\u0000u\u0000p\u0000a\u0000n\u0000e\u0000c\u0000o\u0000m\u0000m\u0000e\u0000r\u0000c\u0000e\u0000\r\u0000 \u0000#\u0000 \u0000r\u0000u\u0000p\u0000a\u0000n\u0000e\u0000c\u0000o\u0000m\u0000m\u0000e\u0000r\u0000c\u0000e\u0000\r\u0000 \u0000#\u0000 \u0000r\u0000u\u0000p\u0000a\u0000n\u0000e\u0000c\u0000o\u0000m\u0000m\u0000e\u0000r\u0000c\u0000e\u0000\r\u0000 \u0000",
+    "main": "./backend/server.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rupanbiswas/rupanecommerce.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rupanbiswas/rupanecommerce/issues"
+    },
+    "homepage": "https://github.com/rupanbiswas/rupanecommerce#readme",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "bcryptjs": "^2.4.3",
+        "colors": "^1.4.0",
+        "cors": "^2.8.5",
+        "dotenv": "^9.0.2",
+        "express": "^4.17.1",
+        "express-async-handler": "^1.1.4",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.12.8",
+        "nodemon": "^2.0.13"
+    }
+}
