@@ -21,7 +21,9 @@ export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
-    const { data } = await axios.get("/api/products");
+    const { data } = await axios.get(
+      "https://e-commerce-alg5.onrender.com/api/products"
+    );
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -38,7 +40,9 @@ export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(
+      `https://e-commerce-alg5.onrender.com/api/products/${id}`
+    );
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -66,7 +70,10 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const { data } = await axios.delete(`/api/products/${id}`, config);
+    const { data } = await axios.delete(
+      `https://e-commerce-alg5.onrender.com/api/products/${id}`,
+      config
+    );
     dispatch({
       type: PRODUCT_DELETE_SUCCESS,
     });
@@ -96,7 +103,11 @@ export const createProduct = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const { data } = await axios.post(`/api/products`, {}, config);
+    const { data } = await axios.post(
+      `https://e-commerce-alg5.onrender.com/api/products`,
+      {},
+      config
+    );
     dispatch({
       type: PRODUCT_CREATE_SUCCESS,
       payload: data,
@@ -127,7 +138,11 @@ export const updateProduct = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const { data } = await axios.put(`/api/products`, {}, config);
+    const { data } = await axios.put(
+      `https://e-commerce-alg5.onrender.com/api/products`,
+      {},
+      config
+    );
     dispatch({
       type: PRODUCT_UPDATE_SUCCESS,
       payload: data,
